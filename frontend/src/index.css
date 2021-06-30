@@ -1,0 +1,14 @@
+*, *::before, *::after {
+  font-size:  25px!important;
+}
+
+@media (min-width:900px) {
+  .MuiContainer-maxWidthXs {
+    max-width: 650px!important;
+  }
+}
+@media (max-width:900px) {
+  .MuiContainer-maxWidthXs {
+    max-width: 444px!important;
+  }
+}

@@ -1,0 +1,43 @@
+fetch('http://127.0.0.1:8000/posts/', {
+  method: 'post',
+  headers: {
+    'Accept': 'application/json, text/plain, */*',
+    'Content-Type': 'application/json',
+    'Authorization':'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0b2tlbl90eXBlIjoiYWNjZXNzIiwiZXhwIjoxNjE2MzIzMDk1LCJqdGkiOiIwNzI3OTAyZTQ0MjE0Nzc4ODIxMjg5YWUwOTg1YzY4YSIsInVzZXJfaWQiOjF9.Tc0S0M6Qd_hPeeBHQk37q904E2ci4DWWN5WNGRLQYMY'
+  },
+  body: JSON.stringify({
+   "title":"Rons",
+   "body":"Rsscddsssss",
+   "notify_users":false,
+   "categories":[
+
+   ]
+})
+}).then(res => res.json())
+  .then(res => console.log(res));
+
+fetch('http://127.0.0.1:8000/posts/')
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+
+"image":{
+                    "lastModified": 1615442737248,
+                    ​​
+                    "name": "image.jpg",
+                    ​​
+                    "size": 682138,
+                    ​​
+                    "type": "image/jpeg",
+                    ​​
+                    "webkitRelativePath": ""},
+
+            "owner":1,
+            "post":1
+
+curl -X POST -S \
+  -H 'Accept: application/json' \
+  -F "post=1" \
+  -F "owner=1" \
+  -F "image=@./APP.png;type=image/png" \
+  http://127.0.0.1:8000/posts/image/
